@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry Page</title>
+    <link rel="stylesheet" href="{% static 'styles\mystyle.css' %}">
+</head>
+<body class="firstpage">
+    <header>
+        <ul class="websiteSelect">
+            {% block content %}
+            <a href="{% url 'home' %}" class="ourWebsite"><li class="optionSite">Human Resourses</li></a>
+            {% endblock content %}
+            <li class="optionSite">Student Affairs</li>
+            <li class="optionSite">Higher studies</li>
+            <li class="optionSite">Laboratory tracking</li>
+        </ul>
+    </header>
+    <script src="{% static 'javascript\myscripts.js' %}"></script>
+</body>
+</html>

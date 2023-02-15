@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacations list</title>
+    <link rel="stylesheet" href="{% static 'styles\mystyle.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Submitted Vacations</h1>
+        {%include 'nav.html'%}
+    </header>
+    <main>
+        <table>
+            <tr>
+                <th>Employee id</th>
+                <th>Employee name</th>
+                <th>From date</th>
+                <th>To date</th>
+                <th>Reason</th>
+                <th>Verdict</th>
+            </tr>
+            {% block content %}
+            {% for vac in vacs%}
+            <tr>
+                <td>{{vac.emp.id}}</td>
+                <td>{{vac.emp.name}}</td>
+                <td>{{vac.fromDate}}</td>
+                <td>{{vac.toDate}}</td>
+                <td>{{vac.reason}}</td>
+                <td>
+                    <button type="submit" value="Accept" class="greenbutton" id="accept" onclick="accept(this)">Accept</button>
+                    <button type="submit" value="Reject" class="redbutton" id="reject" onclick="reject(this)">Reject</button>
+                </td>
+            </tr>
+            {% endfor %}
+            {% endblock content %}
+        </table>
+    </main>
+    <script src="{% static 'javascript\myscripts.js' %}"></script>
+</body>
+</html>

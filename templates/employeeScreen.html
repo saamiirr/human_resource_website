@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Screen</title>
+    <link rel="stylesheet" href="{% static 'styles\mystyle.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Employee screen</h1>
+        {%include 'nav.html'%}
+    </header>
+    <main>
+        {% block content %}
+        <fieldset>
+            <legend>Employee Info</legend>
+            <p>Name: {{emp.name}}</p>
+            <p>id: {{emp.id}}</p>
+            <p>email: {{emp.email}}</p>
+            <p>Address: {{emp.address}}</p>
+            <p>Phone number: {{emp.phone}}</p>
+            <p>Gender: {{emp.gender}}</p>
+            <p>Marital status: {{emp.marital}}</p>
+            <p>Number of available vaction days: {{emp.availableVac}}</p>
+            <p>Number of approved vaction days: {{emp.approvedVac}}</p>
+            <p>Salary: {{emp.salary}}</p>
+            <p>Date of birth: {{emp.dob}}</p>
+        </fieldset> <br>
+        <button class="linkbutton"><a href="{% url 'empEdit' emp.id %}">update info</a></button>
+        {% endblock content %}
+    </main>
+    <script src="{% static 'javascript\myscripts.js' %}"></script>
+</body>
+</html>

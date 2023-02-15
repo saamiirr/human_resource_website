@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Search for an employee | Human Resources
+        </title>
+        <link rel="stylesheet" href="{% static 'styles\mystyle.css' %}">
+    </head>
+    <body>
+        <header>
+            <h1>search for an employee</h1>
+            {%include 'nav.html'%}
+        </header>
+        <main>
+        <form>
+            <input type="search" placeholder="search by name.." size="100" name="srch">
+            <input type="submit" value="Search" class="bluebutton">
+        </form>
+        <h2 align = "center">Employees with similar names:</h2>
+        {% block content %}
+        <table id="match">
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Request a vacation</th>
+                <th>Employee screem</th>
+            </tr>
+            {% for emp in emps%}
+            <tr>
+                <td>{{emp.name}}</td>
+                <td>{{emp.id}}</td>
+                <td> <a href="{% url 'requestVac' emp.id %}"> Submit for vacation here</a> </td>
+                <td> <a href="{% url 'empScreen' emp.id %}"> view employee screen here </a> </td>
+            </tr> 
+            {% endfor %}
+        </table>
+        {% endblock content %}
+        </main>
+        <script src="{% static 'javascript\myscripts.js' %}"></script>
+    </body>
+</html>

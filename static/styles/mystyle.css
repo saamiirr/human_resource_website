@@ -1,0 +1,161 @@
+body{
+    background-color: #BDC3C7;
+    font-size: 1.2vw;
+}
+h3{
+    font-size: 1.8vw;
+}
+/*header*/
+header h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #6b5b95;
+    color: white;
+    text-shadow: 3px 3px 12px #ababab;
+    font-size: 3vw;
+    padding: 10%;
+    margin: 0;
+    height: 4vw;
+}
+/*nav bar*/
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5F6A6A ;
+}
+nav li{
+    display: inline;
+    float: left;
+}
+nav a{
+    display: block;
+    padding:1vw 4vw;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.4vw;
+}
+nav li a:hover:not(.home){
+    background-color: #424949;
+}
+.home{
+    background-color: orange;
+}
+/*table*/
+table, th, td{
+    border: 1px solid;
+}
+td, th{
+    padding: 1vw;
+    font-size: 1.2vw;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+tr:nth-child(even){
+    background-color: #909497;
+}
+th{
+    background-color:  #6b5b95;
+    color: white;
+}
+td{
+    text-align: center;
+}
+td a{
+    text-decoration: none;
+    color: blue;
+    font-size: 1.3vw;
+}
+/*form*/
+input[type=text], input[type=email], input[type=tel], input[type=date]{
+    width: 20%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: none;
+    border-bottom:2px solid #009b77;
+}
+input[type=number]{
+    width: 5%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: none;
+    border-bottom:2px solid #009b77;
+}
+input[type=search]{
+    size: 100;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 15px 25px;
+    border: none;
+    border-bottom:2px solid #2874A6;
+}
+.bluebutton{
+    background-color: #21618C;
+    border: none;
+    padding: 12px 50px;
+    color: white;
+    font-size: 1.1vw;
+    cursor: pointer;
+}
+.greenbutton{
+    background-color: green;
+    border: none;
+    padding: 10px 40px;
+    margin: 2px 5px;
+    color: white;
+    font-size: 1.1vw;
+    cursor: pointer;
+    float: left;
+}
+.redbutton{
+    background-color: red;
+    border: none;
+    padding: 10px 40px;
+    margin: 2px 5px;
+    color: white;
+    font-size: 1.1vw;
+    cursor: pointer;
+    float: right;
+}
+.linkbutton{
+    background-color: #21618C;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    margin: 2px 5px;
+    font-size: 1.1vw;
+    float: left;
+}
+.linkbutton a{
+    text-decoration: none;
+    color: white;
+}
+/*very first page*/
+.firstpage{
+    background-color: #98b4d4;
+}
+ul.websiteSelect{
+    list-style-type: none;
+    margin: 400px 0px;
+    padding: 30px;
+}
+li.optionSite{
+    display: inline;
+    padding: 1.1vw 7vw;
+    float: centre;
+    cursor: pointer;
+    font-size: 1.3vw;
+}
+li.optionSite:hover{
+    border: none;
+    border-bottom:5px solid orange;
+}
+a.ourWebsite{
+    text-decoration: none;
+    color: blue;
+    text-align: center;
+}

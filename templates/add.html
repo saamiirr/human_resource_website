@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+<head>
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="{% static 'styles\mystyle.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Add an employee</h1>
+        {%include 'nav.html'%}
+    </header>
+    <main>
+    {% block content %}
+    <form name="addform">
+        {% csrf_token %}
+        <br>
+        <div>ID : <input type="text" name="id"></div>
+        <br \>
+        <div> Name : <input type="text" name="name"> </div>
+        <br \>
+        <div> Available vacation days <input type="number" name="available_vac_days"></div>
+        <br \>
+        <div>Approved vacation days <input type="number" name="approved_vac_days"> </div>
+        <br \>
+        <div>E-mail : <input type="email" name="email"></div>
+        <br \>
+        <div>Salary <input type="number" name="salary"> </div>
+        <br \>
+        <div>Address : <input type="text" name="address"></div>
+        <br \>
+        <div> Date of birth <input type="date" name="dob"></div>
+        <br \>
+        <div>Phone Number : <input type="text" name="phone"></div>
+        <br \>
+        <div> Marital status :  <input type="radio" name="marital" value="Single"> Single <input type="radio" name="marital" value="Married">Married </div>
+        <br \>
+        <div> Gender : <input type="radio" name="gender" value="Male">Male <input type="radio" name="gender" value="Female"> Female</div>
+        <br \>
+        <button type="button" class="greenbutton" onclick="addEmp()">submit</button>
+        <br>
+    </form>
+    {% endblock content %}
+    </main>
+    <script src="{% static 'javascript\myscripts.js' %}"></script>
+</body>
+
+</html>

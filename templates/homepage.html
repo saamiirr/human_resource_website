@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static 'styles\mystyle.css' %}">
+    <title>Home</title>
+  </head>
+  <header>
+    <h1> Human <span>Resources</span></h1>
+    {%include 'nav.html'%}
+  </header>
+  <body>
+    <script src="{% static 'javascript\myscripts.js' %}"></script>
+  </body>
+</html>
